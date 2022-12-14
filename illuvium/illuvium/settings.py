@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'illuvium.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test01',
+        'USER': 'dbadmin',
+        'PASSWORD': 'dbpass',
+        'HOST': '',# 明示的に設定する場合に記述する（今回はブランクにする）
+        'PORT': '',# 明示的に設定する場合に記述する（今回はブランクにする）
     }
 }
 
