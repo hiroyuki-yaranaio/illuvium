@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body{
+      font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    }
+    #ナビゲーションを固定にしたいがうまくいかない
+    .left_navi{
+        position: fixed;
+    }
+    .flex{
+    display: flex;
+    }
+    .center{
+      width:60%;
+      margin: 
+      0 auto;
+    }
+    h3{
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+    <div style="background-color: #566270;color: white;">Illuvium Club</div>
+    <div class="flex">
+    <div class="left">
+      Auguments<br>
+      （複数のAugumentsのシナジー）<br>
+      （アフィニティやクラスについて）<br>
+      （ボンディング時のクラスについて）<br>
+      （オーバーワールドの資源の場所s）<br>
+      {% if user.is_authenticated %}
+          ログイン済<br>
+      {% else %}
+          未ログイン<br>
+      {% endif %}
+    </div>
+
+    <div class="center">
+      {% block content %}
+      サイトの内容
+      {% endblock %}
+    </div>
+    <div class="left">
+      <img src="/media/momonga.png" hight="100px" width="100px"/><br>
+      管理人：hisapio<br>
+      会員制コミュニティはコチラ<br>
+      人は何にでもなれる<br>
+      [ここに有料サイトのURLを貼る]
+    </div>
+    </div>
+  </body>
+</html>
+

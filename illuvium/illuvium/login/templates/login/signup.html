@@ -1,0 +1,13 @@
+ <h1>ユーザ登録</h1>
+ https://teratail.com/questions/134963
+<form action="" method="post">
+    {% csrf_token %}
+    {{userForm.as_p }}
+    {% for error in userForm.title.errors %}
+    <li>
+        {{ error }}
+    </li>
+    {% endfor %}
+    <!-- <button type="submit">投稿</button> -->
+    <input type="submit" value="投稿">
+</form>
