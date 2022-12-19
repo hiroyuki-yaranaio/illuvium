@@ -17,6 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
+app_name = 'illuviumsite'
+
 urlpatterns = [
-    path('', views.index,name='index'),
+    path('', views.top,name='top'),
+    path('augments', views.augments,name='augments'),
+    path('resources', views.resources,name='resources'),
 ]

@@ -3,6 +3,14 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def index(request):
+def top(request):
     context = {}
-    return render(request,"illuviumsite/argments.html",context)
+    return render(request,"illuviumsite/top.html",context)
+
+def augments(request):
+    context = {}
+    return render(request,"illuviumsite/augments.html",context)
+
+def resources(request):
+    context = {}
+    return render(request,"illuviumsite/resources.html",context)
