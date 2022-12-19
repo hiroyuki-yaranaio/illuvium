@@ -11,6 +11,10 @@ def augments(request):
     context = {}
     return render(request,"illuviumsite/augments.html",context)
 
+def patchnote(request):
+    context = {}
+    return render(request,"illuviumsite/patchnote.html",context)
+
 def resources(request):
     context = {}
     return render(request,"illuviumsite/resources.html",context)

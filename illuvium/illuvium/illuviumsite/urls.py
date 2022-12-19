@@ -22,5 +22,6 @@ app_name = 'illuviumsite'
 urlpatterns = [
     path('', views.top,name='top'),
     path('augments', views.augments,name='augments'),
+    path('patchnote', views.patchnote,name='patchnote'),
     path('resources', views.resources,name='resources'),
 ]

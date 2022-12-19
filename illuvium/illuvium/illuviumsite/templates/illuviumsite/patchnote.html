@@ -1,0 +1,49 @@
+{% extends "illuviumsite/layout.html" %}
+
+{% block content %}
+<h3>Arena 0.2.3 Patch Notes</h3>
+<h3>ゲームメカニズムの変更</h3>
+<h3>エナジーゲイン</h3>
+現在、ユニットがダメージを受けるとエナジーを得ることができるため、シールドを張っているタンクが強すぎる。<br>
+私たちは、劇的な変更を行わずにこれを修正する方法を試しています。<br>
+<h3>エネルギー獲得量の計算式を更新</h3>
+シールドを張っている場合に、受けるダメージによってはエナジーを獲得できないように修正。<br>
+シールドを張っている場合でも自身が攻撃したり、他の要因でのエナジー獲得は有効です。<br>
+<h3>イルビアルの変更</h3>
+今回の比較的小規模なパッチは、OmegaとSynergyのチューニングにより、単体対象のダメージディーラーのダメージ量を増加させることを目的としており、パフォーマンスの低いラインに焦点を当てています。<br>
+リプターライン、ダッシュライン、フェルンラインといった不評のラインに焦点を当てています。<br>
+<br>
+<h3>リプターライン</h3>
+Stage 1 — リプター<br>
+Omega Damage: (8% Max Health + 100) * Omega Power → (8% Max Health + 140) * Omega Power<br>
+<br>
+Stage 2 — リプタラス<br>
+Omega Damage: (8% Max Health + 130) * Omega Power → (8% Max Health + 170) * Omega Power<br>
+<br>
+Stage 3 — リプランス<br>
+Omega Damage: (8% Max Health + 160) * Omega Power → (8% Max Health + 200) * Omega Power<br>
+<br>
+<h3>ダッシュライン</h3>
+Stage 1 — Dash<br>
+Omega Damage: (Attack Damage + 60) * Omega Power → (Attack Damage + 90) * Omega Power<br>
+<br>
+Stage 2 — Rake<br>
+Omega Damage: (Attack Damage + 100) * Omega Power → (Attack Damage + 130) * Omega Power<br>
+<br>
+Stage 3 — Umbre<br>
+Omega Damage: (Attack Damage + 150) * Omega Power → (Attack Damage + 170) * Omega Power<br>
+<br>
+<h3>Synergy Changes</h3>
+<h3>Steam</h3>
+<h3>水蒸気が発生している間における、ウォータースタック毎のエナジーリジェネ</h3>
+ウォーターシナジーにつき２増加 → ウォーターシナジーにつき３増加<br>
+<h3>Wildfire</h3>
+<h3>ファイアシナジー毎の継続期間中のダメージ量</h3>
+ファイアシナジーにつき７５ダメージ → ファイアシナジーにつき１２５ダメージ<br>
+<h3>Slayer</h3>
+<h3>アタックスピードバフの期間</h3>
+5 seconds → 8 seconds<br>
+<h3>Templar</h3>
+ファイターシナジー毎のダメージ増加量<br>
+15% → 25%<br>
+{% endblock %}
