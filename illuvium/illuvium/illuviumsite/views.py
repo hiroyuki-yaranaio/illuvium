@@ -3,9 +3,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def top(request):
+def activity(request):
     context = {}
-    return render(request,"illuviumsite/top.html",context)
+    return render(request,"illuviumsite/activity.html",context)
 
 def augments(request):
     context = {}
