@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
+app_name = 'login'
+
 urlpatterns = [
     # path('', views.signup,name='signup'),
-    path('', views.showUsers, name='showUsers'),
+    path('signup', views.signup, name='signup'),
         #ユーザの登録フォームを呼び出す
     path('create', views.showCreateUserForm, name='showCreateUserForm'),
 ]

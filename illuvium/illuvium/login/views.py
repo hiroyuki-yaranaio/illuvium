@@ -39,7 +39,18 @@ def showCreateUserForm(request):
     return render(request, 'login/signup.html',context)
 
 # 新規登録フォームHTMLへ返す
-def showUsers(request):
+def signup(request):
+
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        print(form.is_valid())
+        print(form)
+
+        if form.is_valid():
+            form.save()
+    else:
+        form = UserForm()
+
     #フォームを変数にセット
     form = UserForm()
 
@@ -48,4 +59,4 @@ def showUsers(request):
     }
  
     #detail.htmlへデータを渡す
-    return render(request, 'login/signup_complete.html',context)
+    return render(request, 'login/signup.html',context)
