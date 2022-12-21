@@ -23,3 +23,22 @@
     <!-- <button type="submit">投稿</button> -->
     <input type="submit"  class="btn btn-primary" value="登録">
 </form>
+
+{% extends "illuviumsite/layout.html" %}
+
+{% block content %}
+<h2>活動履歴</h2>
+
+<h3>2022/12/19 Arena 0.2.3 Patch Notesを和訳</h3>
+<a href="{% url 'illuviumsite:patchnote' %}">Patchnote</a><br>
+<br>
+<h3>2022/12/18 Samusai Guild（ヨウさん？）主催　イルビウム国内大会に参加</h3>
+・国内の大会に参加しました。ルールはコンティニュー無しアリーナです。<br>
+結果は<br>
+    １位 whityさん<br>
+    ２位 absoさん<br>
+    ３位 hisapio（私）<br>
+でした。みなさんおめでとうございます。
+<br>
+
+{% endblock %}

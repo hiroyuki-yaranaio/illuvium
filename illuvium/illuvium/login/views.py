@@ -3,6 +3,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from . forms import UserForm
+from pprint import pprint
 
 def signup(request):
     context = {}
@@ -48,6 +49,10 @@ def signup(request):
 
         if form.is_valid():
             form.save()
+            request.session['user_name'] = request.POST["Name"]
+            print("登録しました")
+            # セッションを削除したい場合
+            # del request.session['セッション名']
     else:
         form = UserForm()
 

@@ -4,6 +4,10 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def activity(request):
+
+    if "user_name" in request.session:
+        print("ユーザー名："+request.session["user_name"])
+
     context = {}
     return render(request,"illuviumsite/activity.html",context)
 
