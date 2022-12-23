@@ -11,9 +11,11 @@
   </style>
 </head>
 <body>
-    <div style="background-color: #566270;color: white;">Illuvium Club
-      <a  class="btn btn-info" href="{% url 'login:signup' %}">新規登録</a>
+    <div class="flex" style="margin-top: 20px;margin-bottom: 20px;">
+      <div><span class="maintitle">Illuvium Club</span><a  class="btn btn-info" href="{% url 'login:signup' %}">新規登録</a>
+      </div>
     </div>
+
     <div class="flex">
     <div class="left">
       <span class="navigation_title"><a href="{% url 'illuviumsite:activity' %}">Top</a></span><br>
@@ -22,6 +24,7 @@
       <span class="navigation_article"><a href="{% url 'illuviumsite:patchnote' %}">Patchnote</a></span><br>
       <span class="navigation_title">OverWorld</span><br>
       <span class="navigation_article"><a href="{% url 'illuviumsite:resources' %}">OverWorldの資源</a></span><br>
+      <span class="navigation_article"><a href="{% url 'illuviumsite:map_crymzonwaste' %}">マップ（クリムゾンウェイスト）</a></span><br>
     </div>
 
     <div class="center">

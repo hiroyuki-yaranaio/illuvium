@@ -45,3 +45,31 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .maintitle{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    background: #eee;
+    box-sizing: border-box;
+  }
+
+  /* .maintitle:before, .maintitle:after{ */
+    /* content: '';
+    position: absolute;
+    top: -7px;
+    width: 2px;
+    height: -webkit-calc(100% + 14px);
+    height: calc(100% + 14px);
+    background-color: black; */
+  /* } */
+
+  /* .maintitle:before {
+    left:0;
+  }
+  .maintitle:after {
+    right: 0;
+  } */

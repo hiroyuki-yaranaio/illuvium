@@ -15,6 +15,10 @@ def augments(request):
     context = {}
     return render(request,"illuviumsite/augments.html",context)
 
+def map_crymzonwaste(request):
+    context = {}
+    return render(request,"illuviumsite/map_crymzonwaste.html",context)
+
 def patchnote(request):
     context = {}
     return render(request,"illuviumsite/patchnote.html",context)
