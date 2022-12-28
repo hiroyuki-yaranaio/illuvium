@@ -19,6 +19,13 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  h2 {
+    /* border-radius: 10px; */
+    background-color: #8b8b8b;
+    color: #f5f5f5;
+  }
+
   h3,h4,h5{
     margin: 0;
   }
@@ -82,14 +89,15 @@
     margin-right: 20px;
   }
 
-  .center {
-    /* background: #eee; */
-    margin-right: 10px;
-  }
-
-  /* .right {
+  /* .center {
     background: #eee;
+    margin-right: 10px;
   } */
+
+  .right {
+    background: #f5f5f5;
+    margin-left: 20px;
+  }
 
 
 
