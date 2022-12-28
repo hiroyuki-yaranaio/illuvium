@@ -18,14 +18,28 @@
 
     <div class="flex">
       <div class="left">
-        <span class="navigation_title"><a href="{% url 'illuviumsite:activity' %}">Top</a></span><br>
-        <span class="navigation_title">Arena</span><br>
-        <span class="navigation_article"><a href="{% url 'illuviumsite:augments' %}">Augments</a></span><br>
-        <span class="navigation_article"><a href="{% url 'illuviumsite:patchnote' %}">Patchnote</a></span><br>
-        <span class="navigation_title">OverWorld</span><br>
-        <span class="navigation_article"><a href="{% url 'illuviumsite:resources' %}">OverWorldの資源</a></span><br>
-        <span class="navigation_article"><a href="{% url 'illuviumsite:map_crymzonwaste' %}">マップ（クリムゾンウェイスト）</a></span><br>
-      </div>
+        <div class="navigation_title">
+          <a href="{% url 'illuviumsite:activity' %}">Top</a>
+        </div>
+        <div class="navigation_title">
+          <img src="/media/arena.png" hight="30px" width="30px"/><span class="navigation_title arena">Arena</span>
+        </div>
+        <div class="navigation_article">
+          <a href="{% url 'illuviumsite:augments' %}">Augments</a>
+        </div>
+        <div class="navigation_article">
+          <a href="{% url 'illuviumsite:patchnote' %}">Patchnote</a>
+        </div>
+        <div class="navigation_title">
+          <img src="/media/pokemon.png" hight="30px" width="30px"/><span class="navigation_title overworld">OverWorld</span>
+        </div>
+        <div class="navigation_article">
+          <a href="{% url 'illuviumsite:resources' %}">OverWorldの資源</a>
+        </div>
+        <div class="navigation_article">
+          <a href="{% url 'illuviumsite:map_crymzonwaste' %}">マップ（クリムゾンウェイスト）</a>
+        </div>
+        </div>
 
 
       <div class="center">

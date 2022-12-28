@@ -11,9 +11,13 @@
   }
   .navigation_title{
     color:#566270;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .navigation_article{
     padding-left:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   h3,h4,h5{
     margin: 0;
@@ -22,8 +26,16 @@
     /* padding: 0rem 1rem;
     border-left: 4px solid #000; */
 
-    padding: 0rem 1rem;
-    background: rgba(165, 210, 255, .4);
+    /* 下線 */
+    /* border-bottom: 3px solid #000; */
+
+    /* 背景と左線 */
+    padding: 1rem 2rem;
+    border-left: 1px solid #000;
+    background: #f5f5f5;
+    
+    /* padding: 0rem 1rem;
+    background: rgba(165, 210, 255, .4); */
 
     /* padding: 1.65rem 2rem;
     background-color: rgba(165, 210, 255, .4);
@@ -33,19 +45,6 @@
     background-size:  0px 40px; */
   }
 
-  .hitowa {
-    font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'Hiragino Mincho ProN', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    background: #000;
-  }
-  .hitowa2 {
-    background-image: -webkit-linear-gradient(315deg, #b8751e 0%, #ffce08 37%, #fefeb2 47%, #fafad6 50%, #fefeb2 53%, #e1ce08 63%, #b8751e 100%);
-    background-image: linear-gradient(135deg, #b8751e 0%, #ffce08 37%, #fefeb2 47%, #fafad6 50%, #fefeb2 53%, #e1ce08 63%, #b8751e 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
   .maintitle{
     position: fixed;
     z-index: 999;
@@ -53,7 +52,7 @@
     left: 0;
     width: 100%;
     padding: 20px 40px;
-    background: #eee;
+    background: #f5f5f5;
     box-sizing: border-box;
   }
 
@@ -73,3 +72,26 @@
   .maintitle:after {
     right: 0;
   } */
+
+  a {
+    text-decoration: none;
+  }
+
+  .left {
+    background: #f5f5f5;
+    margin-right: 20px;
+  }
+
+  .center {
+    /* background: #eee; */
+    margin-right: 10px;
+  }
+
+  /* .right {
+    background: #eee;
+  } */
+
+
+
+
+
