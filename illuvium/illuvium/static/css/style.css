@@ -81,7 +81,13 @@
   } */
 
   a {
-    text-decoration: none;
+    text-decoration: none black;
+    color: black;
+  }
+
+  .link {
+    text-decoration: dashed;
+    color: blue;
   }
 
   .left {
