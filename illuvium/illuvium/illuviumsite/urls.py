@@ -25,4 +25,5 @@ urlpatterns = [
     path('patchnote', views.patchnote,name='patchnote'),
     path('resources', views.resources,name='resources'),
     path('map_crymzonwaste', views.map_crymzonwaste,name='map_crymzonwaste'),
+    path('capturerate', views.capturerate,name='capturerate'),
 ]
