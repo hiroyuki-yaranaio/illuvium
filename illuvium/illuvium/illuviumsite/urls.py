@@ -26,4 +26,8 @@ urlpatterns = [
     path('resources', views.resources,name='resources'),
     path('map_crymzonwaste', views.map_crymzonwaste,name='map_crymzonwaste'),
     path('capturerate', views.capturerate,name='capturerate'),
+    path('google425ab4421bc49419.html/', views.google,name='google'),
+
+
+
 ]

@@ -111,3 +111,9 @@ def patchnote(request):
 def resources(request):
     context = {}
     return render(request,"illuviumsite/resources.html",context)
+
+def google(request):
+    context = {}
+    return render(request,"illuviumsite/google425ab4421bc49419.html",context)
+
+
