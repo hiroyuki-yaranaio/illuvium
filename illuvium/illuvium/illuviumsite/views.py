@@ -43,7 +43,61 @@ def capturerate(request):
 
     #context["IlluvialTier"]  = [ p[0] for p in RateSearch.IlluvialTier.field.choices ]
     #context["IlluvialStage"]  = [ p[0] for p in RateSearch.IlluvialStage.field.choices ]
-    context["rateSearch"]   = RateSearch.objects.all()
+    data = RateSearch.objects.all()
+    t0s=[0,0,0,0,0,0]
+    t1s=[0,0,0,0,0,0]
+    t2s=[0,0,0,0,0,0]
+    t3s=[0,0,0,0,0,0]
+    t4s=[0,0,0,0,0,0]
+    t5s=[0,0,0,0,0,0]
+
+    t0f=[0,0,0,0,0,0]
+    t1f=[0,0,0,0,0,0]
+    t2f=[0,0,0,0,0,0]
+    t3f=[0,0,0,0,0,0]
+    t4f=[0,0,0,0,0,0]
+    t5f=[0,0,0,0,0,0]
+
+    for d in data:
+        if d.IlluvialTier == 0:
+            if d.Captured == 1:
+                t0s[d.ShardTier] += 1
+            else:
+                t0f[d.ShardTier] += 1
+        elif d.IlluvialTier == 1:
+            if d.Captured == 1:
+                t1s[d.ShardTier] += 1
+            else:
+                t1f[d.ShardTier] += 1
+        elif d.IlluvialTier == 2:
+            if d.Captured == 1:
+                t2s[d.ShardTier] += 1
+            else:
+                t2f[d.ShardTier] += 1
+        elif d.IlluvialTier == 3:
+            if d.Captured == 1:
+                t3s[d.ShardTier] += 1
+            else:
+                t3f[d.ShardTier] += 1
+        elif d.IlluvialTier == 4:
+            if d.Captured == 1:
+                t4s[d.ShardTier] += 1
+            else:
+                t4f[d.ShardTier] += 1
+        elif d.IlluvialTier == 5:
+            if d.Captured == 1:
+                t5s[d.ShardTier] += 1
+            else:
+                t5f[d.ShardTier] += 1
+    print(t0s,t0f)
+    print(t1s,t1f)
+    print(t2s,t2f)
+    print(t3s,t3f)
+    print(t4s,t4f)
+    print(t5s,t5f)
+
+        
+    #context["rateSearch"]   = RateSearch.objects.all()
  
     #detail.htmlへデータを渡す
     return render(request, 'illuviumsite/capturerate.html',context)

@@ -4,8 +4,8 @@ from . models import People
 class UserForm(forms.ModelForm):
     class Meta:
         model = People
-        fields = ('Name', 'Mail')
+        fields = ('Name', 'Password')
         labels={
             'Name':'名前',
-            'Mail':'メール',
+            'Password':'パスワード',
         }

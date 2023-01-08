@@ -8,8 +8,8 @@ from django.db import models
 # migrationの履歴削除
 # python manage.py migrate --fake illuviumsite zero 
 
-tier = [("0","0"),("1","1"),("2","2"),("3","3"),("4","4"),("5","5"),]
-stage = [("1","1"),("2","2"),("3","3"),]
+# tier = [("0","0"),("1","1"),("2","2"),("3","3"),("4","4"),("5","5"),]
+# stage = [("1","1"),("2","2"),("3","3"),]
 # モデルクラスを作成
 class RateSearch(models.Model):
 	# 項目定義
@@ -22,3 +22,4 @@ class RateSearch(models.Model):
     # テキスト表示
     def __str__(self):
     	return self.name
+        

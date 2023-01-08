@@ -11,8 +11,8 @@
   </style>
 </head>
 <body>
-    <div class="flex" style="margin-top: 20px;margin-bottom: 20px;">
-      <div><span class="maintitle">Illuvium Club</span><a  class="btn btn-info" href="{% url 'login:signup' %}">新規登録</a>
+    <div class="flex" style="margin-top: 30px;margin-bottom: 50px;">
+      <div><span class="maintitle">Illuvium Club <a style="color:blue;padding-left: 20px;" href="{% url 'login:login' %}">ログイン</a></span>
       </div>
     </div>
 
@@ -37,7 +37,10 @@
           <a href="{% url 'illuviumsite:resources' %}">OverWorldの資源</a>
         </div>
         <div class="navigation_article">
-          <a href="{% url 'illuviumsite:map_crymzonwaste' %}">マップ（クリムゾンウェイスト）</a>
+          マップ
+          <div class="navigation_article">
+            <a href="{% url 'illuviumsite:map_crymzonwaste' %}">Crimson Waste</a>
+          </div>
         </div>
         </div>
 

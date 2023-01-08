@@ -21,7 +21,7 @@ app_name = 'login'
 
 urlpatterns = [
     # path('', views.signup,name='signup'),
-    path('signup', views.signup, name='signup'),
+    path('login', views.login, name='login'),
         #ユーザの登録フォームを呼び出す
     path('create', views.showCreateUserForm, name='showCreateUserForm'),
 ]

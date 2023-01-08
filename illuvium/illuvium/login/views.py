@@ -5,9 +5,9 @@ from django.shortcuts import render
 from . forms import UserForm
 from pprint import pprint
 
-def signup(request):
-    context = {}
-    return render(request,"login/signup.html",context)
+# def signup(request):
+#     context = {}
+#     return render(request,"login/signup.html",context)
 
 # 新規登録フォームHTMLへ返す
 def showCreateUserForm(request):
@@ -40,17 +40,18 @@ def showCreateUserForm(request):
     return render(request, 'login/signup.html',context)
 
 # 新規登録フォームHTMLへ返す
-def signup(request):
+def login(request):
 
     if request.method == 'POST':
         form = UserForm(request.POST)
+        print(request.POST["Password"])
         print(form.is_valid())
         print(form)
 
-        if form.is_valid():
-            form.save()
-            request.session['user_name'] = request.POST["Name"]
-            print("登録しました")
+        # if form.is_valid():
+        #     form.save()
+        #     request.session['user_name'] = request.POST["Name"]
+        #     print("登録しました")
             # セッションを削除したい場合
             # del request.session['セッション名']
     else:
@@ -64,4 +65,4 @@ def signup(request):
     }
  
     #detail.htmlへデータを渡す
-    return render(request, 'login/signup.html',context)
+    return render(request, 'login/login.html',context)
