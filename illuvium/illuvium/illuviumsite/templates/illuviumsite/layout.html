@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="flex" style="margin-top: 30px;margin-bottom: 50px;">
-      <div><span class="maintitle">Illuvium Club <a style="color:blue;padding-left: 20px;" href="{% url 'login:login' %}">ログイン</a></span>
+      <div><span class="maintitle"><a href="{% url 'illuviumsite:activity' %}">Illuvium Club</a><a style="color:blue;padding-left: 20px;" href="{% url 'login:login' %}">ログイン</a></span>
       </div>
     </div>
 
@@ -23,6 +23,9 @@
         </div>
         <div class="navigation_title">
           <img src="/media/arena.png" hight="30px" width="30px"/><span class="navigation_title arena">Arena</span>
+        </div>
+        <div class="navigation_article" style="color:#566270;">
+          ☆Arena攻略
         </div>
         <div class="navigation_article">
           <a href="{% url 'illuviumsite:augments' %}">Augments</a>
@@ -42,6 +45,16 @@
             <a href="{% url 'illuviumsite:map_crymzonwaste' %}">Crimson Waste</a>
           </div>
         </div>
+        <div class="navigation_article" style="color:#566270;">
+          ☆シャード捕獲率
+        </div>
+        <div class="navigation_article" style="color:#566270;">
+          ☆利益計算
+        </div>
+        <!-- <div class="navigation_title">
+          <img src="/media/lisence.png" hight="30px" width="30px"/>
+          <span class="navigation_title overworld">会員専用</span>
+        </div> -->
         </div>
 
 

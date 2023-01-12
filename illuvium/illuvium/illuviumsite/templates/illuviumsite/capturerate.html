@@ -2,11 +2,13 @@
 {% extends "illuviumsite/layout.html" %}
 
 {% block content %}
+<title>イルビウムのオーバーワールドにおけるシャードの捕獲率</title>
 <h2>シャード別捕獲率</h2>
 <h3>確率表（仮）</h3>
 <div>
     <span>縦列...イルビアル　横列...シャード</span><br>
     <span>※施行回数が少ないものに関しては他のTier/Stageを参考にした予想が表示されます。</span>
+    
     <table class="table table-striped-columns">
         <tr>
             <td></td>
@@ -18,168 +20,59 @@
             <td>5</td>
         </tr>
         <tr>
-            <td>Tier0/Stage1</td>
-            <td>50.0%</td>
-            <td>50.0%</td>
-            <td>50.0%</td>
-            <td>50.0%</td>
-            <td>50.0%</td>
-            <td>50.0%</td>
+            <td>Tier0</td>
+            <td>{{ ratet0s0 }}%</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>-%</td>
         </tr>
         <tr>
-            <td>Tier0/Stage2</td>
+            <td>Tier1</td>
+            <td>-%</td>
+            <td>{{ ratet1s1 }}%</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>-%</td>
         </tr>
         <tr>
-            <td>Tier0/Stage3</td>
+            <td>Tier2</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>{{ ratet2s2 }}%</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>-%</td>
+            <td>-%</td>
         </tr>
         <tr>
-            <td>Tier1/Stage1</td>
+            <td>Tier3</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>{{ ratet3s3 }}%</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>-%</td>
         </tr>
         <tr>
-            <td>Tier1/Stage2</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tier1/Stage3</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Tier4</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>{{ ratet4s4 }}%</td>
             <td></td>
         </tr>
         <tr>
-            <td>Tier2/Stage1</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Tier5</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>-%</td>
+            <td>{{ ratet5s5 }}%</td>
         </tr>
-        <tr>
-            <td>Tier2/Stage2</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tier2/Stage3</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tier3/Stage1</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tier3/Stage2</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tier3/Stage3</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tier4/Stage1</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tier4/Stage2</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tier4/Stage3</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tier5/Stage1</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tier5/Stage2</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tier5/Stage3</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-
     </table>
     <form action="" method="post">
         {% csrf_token %}
