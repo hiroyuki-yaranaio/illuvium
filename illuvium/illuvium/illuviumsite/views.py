@@ -98,6 +98,7 @@ def capturerate(request):
 
     context['ratet0s0'] = 0
     context['ratet1s1'] = 0
+    context['ratet2s1'] = 0
     context['ratet2s2'] = 0
     context['ratet3s3'] = 0
     context['ratet4s4'] = 0
@@ -105,6 +106,7 @@ def capturerate(request):
     try:
         context['ratet0s0'] = round(t0s[0]/(t0s[0]+t0f[0])*100,1)
         context['ratet1s1'] = round(t1s[1]/(t1s[1]+t1f[1])*100,1)
+        context['ratet2s1'] = round(t2s[1]/(t2s[1]+t2f[1])*100,1)
         context['ratet2s2'] = round(t2s[2]/(t2s[2]+t2f[2])*100,1)
         context['ratet3s3'] = round(t2s[3]/(t2s[3]+t2f[3])*100,1)
         context['ratet4s4'] = round(t2s[4]/(t2s[4]+t2f[4])*100,1)
