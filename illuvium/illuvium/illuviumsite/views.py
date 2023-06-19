@@ -22,6 +22,11 @@ def map_crymzonwaste(request):
     context = {}
     return render(request,"illuviumsite/map_crymzonwaste.html",context)
 
+def leaderboard(request):
+    context = {}
+    return render(request,"illuviumsite/leaderboard.html",context)
+
+
 def capturerate(request):
     print('capturerate')
     context             = {}
@@ -44,72 +49,107 @@ def capturerate(request):
     #context["IlluvialTier"]  = [ p[0] for p in RateSearch.IlluvialTier.field.choices ]
     #context["IlluvialStage"]  = [ p[0] for p in RateSearch.IlluvialStage.field.choices ]
     data = RateSearch.objects.all()
-    t0s=[0,0,0,0,0,0]
-    t1s=[0,0,0,0,0,0]
-    t2s=[0,0,0,0,0,0]
-    t3s=[0,0,0,0,0,0]
-    t4s=[0,0,0,0,0,0]
-    t5s=[0,0,0,0,0,0]
+    t0s1s=[0,0,0,0,0,0]
+    t1s1s=[0,0,0,0,0,0]
+    t2s1s=[0,0,0,0,0,0]
+    t3s1s=[0,0,0,0,0,0]
+    t4s1s=[0,0,0,0,0,0]
+    t5s1s=[0,0,0,0,0,0]
 
-    t0f=[0,0,0,0,0,0]
-    t1f=[0,0,0,0,0,0]
-    t2f=[0,0,0,0,0,0]
-    t3f=[0,0,0,0,0,0]
-    t4f=[0,0,0,0,0,0]
-    t5f=[0,0,0,0,0,0]
+    t0s1f=[0,0,0,0,0,0]
+    t1s1f=[0,0,0,0,0,0]
+    t2s1f=[0,0,0,0,0,0]
+    t3s1f=[0,0,0,0,0,0]
+    t4s1f=[0,0,0,0,0,0]
+    t5s1f=[0,0,0,0,0,0]
 
     for d in data:
         if d.IlluvialTier == 0:
             if d.Captured == 1:
-                t0s[d.ShardTier] += 1
+                t0s1s[d.ShardTier] += 1
             else:
-                t0f[d.ShardTier] += 1
+                t0s1f[d.ShardTier] += 1
         elif d.IlluvialTier == 1:
             if d.Captured == 1:
-                t1s[d.ShardTier] += 1
+                t1s1s[d.ShardTier] += 1
             else:
-                t1f[d.ShardTier] += 1
+                t1s1f[d.ShardTier] += 1
         elif d.IlluvialTier == 2:
             if d.Captured == 1:
-                t2s[d.ShardTier] += 1
+                t2s1s[d.ShardTier] += 1
             else:
-                t2f[d.ShardTier] += 1
+                t2s1f[d.ShardTier] += 1
         elif d.IlluvialTier == 3:
             if d.Captured == 1:
-                t3s[d.ShardTier] += 1
+                t3s1s[d.ShardTier] += 1
             else:
-                t3f[d.ShardTier] += 1
+                t3s1f[d.ShardTier] += 1
         elif d.IlluvialTier == 4:
             if d.Captured == 1:
-                t4s[d.ShardTier] += 1
+                t4s1s[d.ShardTier] += 1
             else:
-                t4f[d.ShardTier] += 1
+                t4s1f[d.ShardTier] += 1
         elif d.IlluvialTier == 5:
             if d.Captured == 1:
-                t5s[d.ShardTier] += 1
+                t5s1s[d.ShardTier] += 1
             else:
-                t5f[d.ShardTier] += 1
-    print(t0s,t0f)
-    print(t1s,t1f)
-    print(t2s,t2f)
-    print(t3s,t3f)
-    print(t4s,t4f)
-    print(t5s,t5f)
+                t5s1f[d.ShardTier] += 1
+    print("T0S1",t0s1s,t0s1f)
+    print("T1S1",t1s1s,t1s1f)
+    print("T2S1",t2s1s,t2s1f)
+    print("T3S1",t3s1s,t3s1f)
+    print("T4S1",t4s1s,t4s1f)
+    print("T5S1",t5s1s,t5s1f)
 
     context['ratet0s0'] = 0
     context['ratet1s1'] = 0
     context['ratet2s1'] = 0
     context['ratet2s2'] = 0
+    context['ratet3s2'] = 0
     context['ratet3s3'] = 0
+    context['ratet4s3'] = 0
     context['ratet4s4'] = 0
+    context['ratet5s4'] = 0
+    context['ratet5s5'] = 0
 
     try:
-        context['ratet0s0'] = round(t0s[0]/(t0s[0]+t0f[0])*100,1)
-        context['ratet1s1'] = round(t1s[1]/(t1s[1]+t1f[1])*100,1)
-        context['ratet2s1'] = round(t2s[1]/(t2s[1]+t2f[1])*100,1)
-        context['ratet2s2'] = round(t2s[2]/(t2s[2]+t2f[2])*100,1)
-        context['ratet3s3'] = round(t2s[3]/(t2s[3]+t2f[3])*100,1)
-        context['ratet4s4'] = round(t2s[4]/(t2s[4]+t2f[4])*100,1)
+        context['ratet0s1'] = round(t0s1s[0]/(t0s1s[0]+t0s1f[0])*100,1)
+    except Exception as e:
+        print(e)
+    try:
+        context['ratet1s1'] = round(t1s1s[1]/(t1s1s[1]+t1s1f[1])*100,1)
+    except Exception as e:
+        print(e)
+    try:
+        context['ratet2s1'] = round(t2s1s[1]/(t2s1s[1]+t2s1f[1])*100,1)
+    except Exception as e:
+        print(e)
+    try:
+        context['ratet2s2'] = round(t2s1s[2]/(t2s1s[2]+t2s1s[2])*100,1)
+    except Exception as e:
+        print(e)
+    try:
+        context['ratet3s2'] = round(t3s1s[2]/(t3s1s[2]+t3s1f[2])*100,1)
+    except Exception as e:
+        print(e)
+    try:
+        context['ratet3s3'] = round(t3s1s[3]/(t3s1s[3]+t3s1f[3])*100,1)
+    except Exception as e:
+        print(e)
+    try:
+        context['ratet4s3'] = round(t4s1s[3]/(t4s1s[3]+t4s1f[3])*100,1)
+    except Exception as e:
+        print(e)
+    try:
+        context['ratet4s4'] = round(t4s1s[4]/(t4s1s[4]+t4s1f[4])*100,1)
+    except Exception as e:
+        print(e)
+    try:
+        context['ratet5s4'] = round(t5s1s[4]/(t5s1s[4]+t5s1f[4])*100,1)
+    except Exception as e:
+        print(e)
+    try:
+        context['ratet5s5'] = round(t5s1s[5]/(t5s1s[5]+t5s1f[5])*100,1)
     except Exception as e:
         print(e)
 
