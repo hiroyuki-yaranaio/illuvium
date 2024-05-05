@@ -18,9 +18,9 @@ def augments(request):
     context = {}
     return render(request,"illuviumsite/augments.html",context)
 
-def map_crymzonwaste(request):
+def map_AbyssalBasyn(request):
     context = {}
-    return render(request,"illuviumsite/map_crymzonwaste.html",context)
+    return render(request,"illuviumsite/map_AbyssalBasyn.html",context)
 
 def leaderboard(request):
     context = {}
