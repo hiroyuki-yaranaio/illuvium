@@ -26,6 +26,10 @@ def leaderboard(request):
     context = {}
     return render(request,"illuviumsite/leaderboard.html",context)
 
+def data(request):
+    context = {}
+    return render(request,"illuviumsite/data.html",context)
+
 
 def capturerate(request):
     print('capturerate')

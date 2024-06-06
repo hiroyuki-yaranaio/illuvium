@@ -25,6 +25,7 @@ urlpatterns = [
     path('patchnote', views.patchnote,name='patchnote'),
     path('resources', views.resources,name='resources'),
     path('map_AbyssalBasyn', views.map_AbyssalBasyn,name='map_AbyssalBasyn'),
+    path('data', views.data,name='data'),
     path('capturerate', views.capturerate,name='capturerate'),
     path('leaderboard', views.leaderboard,name='leaderboard'),
     path('google425ab4421bc49419.html/', views.google,name='google'),
